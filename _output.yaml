@@ -1,0 +1,28 @@
+#-- For slidy html slides.
+slidy_presentation:
+# -- To display math offline.
+# mathjax: local
+# self_contained: false
+  css: config/slidy-style.css
+  footer: Pesquisa reproduzível
+  highlight: tango
+  includes:
+    in_header: config/MathJax.html
+
+#-- For beamer presentation.
+# beamer_presentation:
+#   fig_caption: yes
+#   fig_crop: no
+#   highlight: haddock
+#   #keep_tex: yes
+
+# #-- For articles.
+# pdf_document:
+#   highlight: haddock
+#   # keep_tex: yes
+#   toc: no
+#   number_sections: yes
+#   fig_caption: no
+# #  template: template.tex
+# #  includes:
+# #    in_header: preamble.tex
