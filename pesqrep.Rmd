@@ -137,6 +137,31 @@ feedback" (extraída de Box, Hunter e Hunter, 2005):
 knitr::include_graphics("img/feedback-loop.png")
 ```
 
+## Escute Richard Feynman
+
+```{r, echo=FALSE, out.width='60%'}
+knitr::include_graphics("img/feynman.jpg")
+```
+
+*The statements of science are not of what is true and what is not true,
+but statements of what is known with different degrees of certainty.*
+
+*Progress in science comes when experiments contradict theory.*
+
+*It doesn't matter how beautiful your theory is. If it disagrees with
+experiment, it's wrong. In that simple statement is the key to science.*
+
+*If you're doing an experiment, you should report everything that you
+think might make it invalid - not only what you think is right about
+it.*
+
+*In its efforts to learn as much as possible about nature, modern
+physics has found that certain things can never be “known” with
+certainty. Much of our knowledge must always remain uncertain. The most
+we can know is in terms of probabilities.*
+
+@[ProfFeynman](https://twitter.com/ProfFeynman)
+
 ## Análise de dados como arte
 
 > *Ciência é conhecimento que entendemos tão bem que podemos ensiná-la
