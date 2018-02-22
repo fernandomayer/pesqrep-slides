@@ -114,6 +114,29 @@ estatístico de **Ronald Fisher**, **Karl Pearson**, **Jerzy Neyman** e
 outros, que desenvolveram grande parte da teoria estatística atual
 associada à "testes de hipótese".
 
+## Aprendizado dedutivo-indutivo
+
+- O processo **dedutivo-indutivo** de aprendizado é orientado pelo
+  cérebro humano
+- É conhecido desde o tempo de Aristóteles e faz parte de nossa
+  **experiência cotidiana**
+
+O aprendizado avança conforme ilustrado na figura abaixo (extraída de
+Box, Hunter e Hunter, 2005):
+
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics("img/deduction-induction.png")
+```
+
+## Um loop de feedback
+
+A figura abaixo mostra o processo dedutivo-indutivo como um "loop de
+feedback" (extraída de Box, Hunter e Hunter, 2005):
+
+```{r, echo=FALSE, out.width='90%'}
+knitr::include_graphics("img/feedback-loop.png")
+```
+
 ## Análise de dados como arte
 
 > *Ciência é conhecimento que entendemos tão bem que podemos ensiná-la
@@ -314,6 +337,9 @@ Benefícios:
 
 ## Mais recursos
 
+- Box, GEP; Hunter, JS; Hunter, WG. [Statistics for experimenters:
+  Design Innovation and Discovery](http://statisticsforexperimenters.net).
+  John Wiley & Sons, 2005.
 - Kitzes, J., Turek, D., & Deniz, F. (Eds.). (2018). [The Practice of
   Reproducible Research: Case Studies and Lessons from the
   Data-Intensive
