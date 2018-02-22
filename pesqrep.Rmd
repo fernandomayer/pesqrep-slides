@@ -192,7 +192,7 @@ Popper).
 
 ## Replicação e reprodução na Ciência
 
-```{r, out.width='90%', echo=FALSE}
+```{r, out.width='70%', echo=FALSE}
 knitr::include_graphics("img/replication.png")
 ```
 
@@ -225,7 +225,7 @@ entre replicar um estudo e não fazer nada.
 
 ## Replicação e reprodução na Ciência
 
-```{r, out.width='90%', echo=FALSE}
+```{r, out.width='70%', echo=FALSE}
 knitr::include_graphics("img/reproduction.png")
 ```
 
