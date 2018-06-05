@@ -30,7 +30,7 @@ header-includes:
 
 - Evolução da tecnologia: coleta, processamento e análise com bases de
   dados de alta dimensão
-- Rotinas de análise mais sofisicadas e complexas
+- Rotinas de análise mais sofisticadas e complexas
 - Como garantir que toda essa informação, e todo esse resultado que vem
   sendo gerado pode ser **confiável**?
 - As análises, os modelos e os algoritmos que usamos atualmente são
