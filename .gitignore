@@ -1,3 +1,9 @@
 *.html
 .Rhistory
 .RData
+.pdf
+.tex
+.gz
+.log
+.docx
+figure/
