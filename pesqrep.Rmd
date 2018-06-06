@@ -270,7 +270,7 @@ Para a Ciência:
 - Diferentes cientistas, com diferentes visões e ideias podem colaborar
   no sentido de continuar a pesquisa, ou sugerir outras abordagens
   (análise de dados como arte)
-- Reproducibilidade aprimora a replicabilidade
+- Reprodutibilidade aprimora a replicabilidade
 - Evita esforço duplicado e encoraja o desenvolvimento cumulativo de
   conhecimento
 
@@ -299,9 +299,9 @@ dados suficientes.
 ## Replicação e reprodução na Ciência
 
 - A revista *Science* teve uma edição inteira dedicada à
-  reproducibilidade.
+  reprodutibilidade.
 - Muitas revistas científicas tem atualizado suas políticas de
-  publicação, para encorajar a reproducibilidade dos artigos publicados.
+  publicação, para encorajar a reprodutibilidade dos artigos publicados.
 
     - *Public Library of Science* (PLoS)
     - Biostatistics
@@ -409,9 +409,9 @@ knitr::include_graphics("img/informacao_qualidade.png")
 knitr::include_graphics("img/disseminacao_desigual.png")
 ```
 
-# Elementos da reproducibilidade
+# Elementos da reprodutibilidade
 
-## Elementos da reproducibilidade
+## Elementos da reprodutibilidade
 
 Quatro elementos principais:
 
@@ -424,7 +424,7 @@ Quatro elementos principais:
 4. **Distribuição**: Distribuir todos esses elementos de maneira que
    sejam facilmente acessíveis.
 
-## Elementos da reproducibilidade
+## Elementos da reprodutibilidade
 
 Estudos recentes tem mostrado que cientistas passam cerca de 30% de seu
 tempo escrevendo códigos.
@@ -450,9 +450,9 @@ como:
 7. Documente a ideia e o propósito, não a mecânica
 8. Colabore
 
-# Ferramentas da reproducibilidade
+# Ferramentas da reprodutibilidade
 
-## Ferramentas da reproducibilidade
+## Ferramentas da reprodutibilidade
 
 Publicar dados e códigos não é necessariamente uma tarefa trivial.
 
@@ -483,7 +483,7 @@ Cada estágio envolve **ferramentas** diferentes
 knitr::include_graphics("img/stages.png")
 ```
 
-## Ferramentas da reproducibilidade
+## Ferramentas da reprodutibilidade
 
 Existem várias ferramentas para auxiliar a tornar uma pesquisa
 reproduzível. Algumas que valem a pena conhecer são:
@@ -501,7 +501,7 @@ reproduzível. Algumas que valem a pena conhecer são:
 - **Programas em shell**: permitem automatizar uma série de tarefas na
   camada de arquivos e dados.
 
-## Ferramentas da reproducibilidade
+## Ferramentas da reprodutibilidade
 
 Algumas dicas para ajudar a tornar um projeto reproduzível:
 
@@ -528,7 +528,7 @@ pesquisa científica, de maneira acessível e auto-contida.
 
 ## Documentos dinâmicos
 
-O ideia básica por trás de documentos dinâmicos decorre diretamente do
+A ideia básica por trás de documentos dinâmicos decorre diretamente do
 conceito de *literate programming* ("programação letrada"), um paradigma
 concebido por Donald Knuth em 1984.
 
@@ -538,7 +538,7 @@ partir de um **código-fonte**:
 - Da mesma forma que um *software* possui seu código-fonte, um documento
   dinâmico é o código-fonte de um relatório.
 - É uma combinação de código de computador e as correspondentes
-  narrativas descrevendo o resultado que o código está gerando (números,
+narrativas descrevendo o resultado que o código está gerando (números,
   tabelas, figuras, ...).
 - Quando **compilamos** o documento dinâmico, o código de computador é
   executado, e as saídas são apresentadas. Portanto obtemos um documento
@@ -549,6 +549,40 @@ No R:
 - Sweave
 - knitr
 - rmarkdown
+
+## Exemplos de documentos dinâmicos
+
+- Usando **rmarkdown** para gerar um documento em PDF
+- Ver [Exemplo1-yaml.pdf](exemplos/Exemplo1-yaml.pdf)
+
+```{r sys1, echo=FALSE, comment=NA}
+cat(system("cat exemplos/Exemplo1-yaml.Rmd", intern = TRUE), sep = "\n")
+```
+
+## Exemplos de documentos dinâmicos
+
+Mais exemplos:
+
+- [Exemplo0-knitr.Rnw](exemplos/Exemplo0-knitr.Rnw) (usando LaTeX)
+- [Exemplo1-knitr.Rmd](exemplos/Exemplo1-knitr.Rmd)
+- [Exemplo1-yaml.Rmd](exemplos/Exemplo1-yaml.Rmd)
+- [Exemplo1-yaml2.Rmd](exemplos/Exemplo1-yaml2.Rmd)
+- [Exemplo3-knitr.Rmd](exemplos/Exemplo3-knitr.Rmd)
+
+## Exemplos de pesquisa reproduzível
+
+**Paper companions** do LEG (desde 2008)
+
+- Ideia de distribuir códigos e dados de papers publicados
+- http://www.leg.ufpr.br/papercompanions
+- Zeviani, *et al*. [The Gamma-count distribution in the analysis of
+  experimental underdispersed
+  data](http://www.leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014).
+  *Journal of Applied Statistics*, 2014.
+- Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
+  generalized linear mixed
+  models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm).
+  *Environmetrics*, 2015.
 
 ## Distribuição de dados
 
@@ -570,7 +604,6 @@ Alguns exemplos são:
   REpositories* é um buscador de bases de dados abertos
 
 ## Distribuição de dados na UFPR
-
 
 ```{r, echo=FALSE, out.width='100%'}
 knitr::include_graphics("img/bdc.png")
