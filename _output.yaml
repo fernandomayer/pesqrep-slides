@@ -6,8 +6,8 @@ slidy_presentation:
   css: config/slidy-style.css
   footer: Pesquisa reproduzível
   highlight: tango
-  includes:
-    in_header: config/MathJax.html
+#  includes:
+#    in_header: config/MathJax.html
 
 #-- For beamer presentation.
 # beamer_presentation:
