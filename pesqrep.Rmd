@@ -42,6 +42,11 @@ header-includes:
 
 ## *The Duke trial saga*
 
+- [An array of errors](https://www.economist.com/node/21528593). The
+  Economist, 2011.
+- [How Bright Promise in Cancer Testing Fell
+  Apart](https://www.nytimes.com/2011/07/08/health/research/08genes.html).
+  The New York Times, 2011.
 - Anil Potti *et al*: A Genomic Strategy to Refine Prognosis in
   Early-Stage Non–Small-Cell Lung Cancer. *The New England Journal of
   Medicine*. 2006.
@@ -62,7 +67,7 @@ header-includes:
 - Foram encontradas diversas falhas como linhas de células com nomes
   errados, nomes e números de células inconsistentes, etc.
 - Depois disso, uma série de investigações foram realizadas, levando a
-  cessar os ensaios clínicos já iniciados pela Universidade.
+  cessar os ensaios clínicos já iniciados pela Universidade de Duke.
 - Dr. Potti pediu demissão, e depois foi descoberto que ele tinha
   envolvimento com empresas da área biomédica.
 
