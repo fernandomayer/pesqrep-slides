@@ -24,6 +24,18 @@ header-includes:
 #   - aspectratio=169
 ---
 
+
+## Sumário
+
+- [Introdução](#introdução)
+- [Um estudo de caso](#um-estudo-de-caso)
+- [Como a ciência funciona](#como-a-ciência-funciona)
+- [Replicação e reprodução na Ciência](#replicação-e-reprodução-na-ciência)
+- [Elementos da reprodutibilidade](#elementos-da-reprodutibilidade)
+- [Ferramentas da reprodutibilidade](#ferramentas-da-reprodutibilidade)
+- [Documentos dinâmicos](#documentos-dinâmicos)
+- [Mais recursos](#mais-recursos)
+
 # Introdução
 
 ## Introdução
@@ -88,36 +100,33 @@ header-includes:
 
 ## Como a ciência funciona
 
-"Árvore de aprendizado" de Platt (1964) a partir de experimentos
+**"Árvore de aprendizado" de Platt (1964)**: a partir de experimentos
 críticos, denominada **inferência forte** (*strong inference*), e que
 consiste das seguintes etapas:
 
-1. Conceber hipóteses alternativas.
-2. Conceber um experimento crucial (ou vários deles) com possíveis
-   resultados alternativos, onde cada um poderá excluir, dentro do
-   possível, uma ou mais hipóteses.
+1. Conceber **hipóteses alternativas**.
+2. Conceber um **experimento crucial** (ou vários deles) com possíveis
+   resultados alternativos, onde cada um poderá **excluir**, dentro do
+   possível, **uma ou mais hipóteses**.
 3. Realizar o experimento de forma a obter resultados mais confiáveis
    possíveis.
-4. Reciclar o procedimento, criando subhipóteses ou hipóteses
+4. **Reciclar o procedimento**, criando subhipóteses ou hipóteses
    sequenciais para refinar as possibilidades que restam, e assim por
    diante.
 
 ## Como a ciência funciona
 
-Esta visão de Platt é naturalmente uma extensão lógica do trabalho de
-**Popper**, que revolucionou a filosofia da Ciência no século 20, ao
-argumentar que uma hipótese **não pode ser provada**, apenas
-**desprovada**.
+- Esta visão de Platt é naturalmente uma extensão lógica do trabalho de
+**Popper**
+  - "Uma hipótese **não pode ser provada**, apenas **desprovada**"
+- A essência do método Popperiano é **"desafiar"** uma hipótese
+  repetidamente.
+  - Se a hipótese permanece válida então ela **não é validada**, mas
+  adquire um certo **"grau de confiança"**
+- Coincidindo com esta filosofia de Popper está o trabalho estatístico
+de **Ronald Fisher**, **Karl Pearson**, **Jerzy Neyman** e outros, que
+desenvolveram grande parte da teoria estatística atual
 
-A essência do método Popperiano é "desafiar" uma hipótese repetidamente.
-Se a hipótese permanece válida então ela não é validada, mas adquire um
-certo "grau de confiança", que na prática passa a ser tratada como
-verdadeira.
-
-Coincidindo com esta filosofia de Popper está o trabalho
-estatístico de **Ronald Fisher**, **Karl Pearson**, **Jerzy Neyman** e
-outros, que desenvolveram grande parte da teoria estatística atual
-associada à "testes de hipótese".
 
 ## Aprendizado dedutivo-indutivo
 
@@ -149,21 +158,21 @@ knitr::include_graphics("img/feynman.jpg")
 ```
 
 *The statements of science are not of what is true and what is not true,
-but statements of what is known with different degrees of certainty.*
+but statements of what is known with **different degrees of certainty**.*
 
-*Progress in science comes when experiments contradict theory.*
+*Progress in science comes when **experiments contradict theory**.*
 
-*It doesn't matter how beautiful your theory is. If it disagrees with
-experiment, it's wrong. In that simple statement is the key to science.*
+*It doesn't matter how beautiful your theory is. **If it disagrees with
+experiment, it's wrong**. In that simple statement is the key to science.*
 
 *If you're doing an experiment, you should report everything that you
-think might make it invalid - not only what you think is right about
+think might make it **invalid** - not only what you think is right about
 it.*
 
 *In its efforts to learn as much as possible about nature, modern
 physics has found that certain things can never be “known” with
-certainty. Much of our knowledge must always remain uncertain. The most
-we can know is in terms of probabilities.*
+certainty. Much of our knowledge must always remain uncertain. **The
+most we can know is in terms of probabilities**.*
 
 @[ProfFeynman](https://twitter.com/ProfFeynman)
 
@@ -175,11 +184,11 @@ we can know is in terms of probabilities.*
 > Donald Knuth, 1974
 
 O processo de análise de dados por um pesquisador pode ser comparado ao
-processo de criação de uma música por um músico.
+processo de **criação de uma música por um músico**.
 
-Os métodos já foram ensinados ao computador, cabe ao analista saber como
-juntar as ferramentas e aplicá-las para responder questões relevantes
-para a ciência e para as pessoas.
+Os métodos já foram ensinados ao computador, cabe ao analista **saber
+como juntar as ferramentas** e aplicá-las para responder questões
+relevantes para a ciência e para as pessoas.
 
 # Replicação e reprodução na Ciência
 
@@ -188,11 +197,11 @@ para a ciência e para as pessoas.
 A **replicação** é um dos pilares fundamentais da ciência.
 
 É necessário que diversos cientistas coletem e analisem dados de forma
-independente, e cheguem no mesmo resultado.
+**independente**, e cheguem no **mesmo resultado**.
 
 Se muitas pessoas diferentes chegarem à mesma conclusão de forma
-independente, então tendemos a pensar que a relação ou resultado
-provavelmente é verdadeiro (que vai de encontro com a filosofia de
+independente, então tendemos a pensar que a relação ou **resultado
+provavelmente é verdadeiro** (que vai de encontro com a filosofia de
 Popper).
 
 ## Replicação e reprodução na Ciência
@@ -226,11 +235,20 @@ Existem muitas boas razões pelas quais não podemos replicar um estudo.
 
 Se replicar não é possível, então existem duas opções:
 
-- Não fazer nada (não e uma opção de verdade)
+- Não fazer nada (não é uma opção de verdade)
 - Reproduzir a pesquisa.
 
 A ideia é criar uma espécie de **padrão mínimo**, ou um *meio-termo*
 entre replicar um estudo e não fazer nada.
+
+## Replicação e reprodução na Ciência
+
+[Peng, 2011,
+*Science*](http://science.sciencemag.org/content/334/6060/1226.full)
+
+```{r, out.width='100%', echo=FALSE}
+knitr::include_graphics("img/F1.large.jpg")
+```
 
 ## Replicação e reprodução na Ciência
 
@@ -247,21 +265,13 @@ knitr::include_graphics("img/reproduction.png")
 Uma parte fundamental da **pesquisa reproduzível** é tornar disponíveis
 **dados** e **métodos computacionais** (em forma de código).
 
-> Um projeto científico é computacionalmente reproduzível se um segundo
-pesquisador (incluindo você no futuro) é capaz de recriar os resultados
-finais do projeto, incluindo as descobertas quantitativas, tabelas e
-figuras, dado apenas um conjunto de arquivos e instruções escritas.
+> Um projeto científico é **computacionalmente reproduzível** se um
+segundo pesquisador (**incluindo você no futuro**) é capaz de recriar os
+resultados finais do projeto, incluindo as descobertas quantitativas,
+tabelas e figuras, **dado apenas um conjunto de arquivos e instruções
+escritas**.
 
 > Justin Kitzes
-
-## Replicação e reprodução na Ciência
-
-[Peng, 2011,
-*Science*](http://science.sciencemag.org/content/334/6060/1226.full)
-
-```{r, out.width='100%', echo=FALSE}
-knitr::include_graphics("img/F1.large.jpg")
-```
 
 ## Replicação e reprodução na Ciência
 
@@ -270,29 +280,29 @@ então **qual o propósito de uma pesquisa reproduzível**?
 
 Para a Ciência:
 
-- Padrão para julgar descobertas científicas
-- Validação da análise de dados
+- Padrão para **julgar** descobertas científicas
+- **Validação** da análise de dados
 - Diferentes cientistas, com diferentes visões e ideias podem colaborar
   no sentido de continuar a pesquisa, ou sugerir outras abordagens
-  (análise de dados como arte)
+  (**análise de dados como arte**)
 - Reprodutibilidade aprimora a replicabilidade
 - Evita esforço duplicado e encoraja o desenvolvimento cumulativo de
   conhecimento
 
 Para você:
 
+- **Maior impacto da pesquisa**
 - Melhores hábitos de trabalho
 - Melhor trabalho em equipe
 - Mudanças são mais fáceis
-- Maior impacto da pesquisa
 
 ## Replicação e reprodução na Ciência
 
 Possíveis preocupações:
 
-- Como fica a questão da propriedade intelectual?
+- Como fica a questão da **propriedade intelectual**?
 - Como fica a disponibilização de dados que foram coletados com
-  financiamento privado ou público?
+  **financiamento** privado ou público?
 - Até que ponto a disponibilização dos dados não irá prejudicar meus
   projetos futuros?
 - Será que não posso sofrer plágio?
@@ -303,6 +313,13 @@ dados suficientes.
 
 ## Replicação e reprodução na Ciência
 
+```{r, echo=FALSE, out.width='100%'}
+knitr::include_graphics("img/economist.png")
+```
+[The Economist, 2018](https://www.economist.com/open-future/2018/09/07/an-explosion-of-openness-is-about-to-hit-scientific-publishing)
+
+## Replicação e reprodução na Ciência
+
 - A revista *Science* teve uma edição inteira dedicada à
   reprodutibilidade.
 - Muitas revistas científicas tem atualizado suas políticas de
@@ -310,6 +327,7 @@ dados suficientes.
 
     - *Public Library of Science* (PLoS)
     - Biostatistics
+    - Muitas outras
 
 ```{r, out.width='90%', echo=FALSE}
 knitr::include_graphics("img/foas.png")
@@ -326,7 +344,7 @@ Victoria Stodden, Jennifer Seiler, and Zhaokun Ma
 - Requisitaram dados e códigos para autores de artigos da revista
   *Science* publicados após 2011 (quando a política de publicação foi
   alterada)
-- Tentaram replicar os estudos de 204 artigos
+- Tentaram reproduzir os estudos de 204 artigos
 - Obtiveram dados e códigos de 44% dos autores
 - Conseguiram reproduzir 26% deles
 
@@ -387,32 +405,39 @@ for the [redacted] models. As you probably know, [redacted] and
 **given that you are a statistics student**! I used Matlab for the
 geometry.*
 
-## Replicação e reprodução na Ciência
-
-[Revista FAPESP,
-2014](http://revistapesquisa.fapesp.br/2014/04/24/ciencia-transparente/?cat=politica)
+## Replicação e reprodução no Brasil
 
 ```{r, echo=FALSE, out.width='100%'}
-knitr::include_graphics("img/ciencia_transparente.png")
+knitr::include_graphics("img/fapesp.png")
 ```
 
-## Replicação e reprodução na Ciência
+- [Revista FAPESP, 2014](http://revistapesquisa.fapesp.br/2014/04/24/ciencia-transparente/?cat=politica)
+- [Revista FAPESP, 2018](http://revistapesquisa.fapesp.br/2018/01/16/informacao-com-qualidade/?cat=politica)
+- [Revista FAPESP, 2018](http://revistapesquisa.fapesp.br/2018/03/20/disseminacao-desigual/?cat=politica)
 
-[Revista FAPESP,
-2018](http://revistapesquisa.fapesp.br/2018/01/16/informacao-com-qualidade/?cat=politica)
+## Replicação e reprodução no Brasil
+
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics("img/iniciativa.png")
+```
+
+- Iniciativa multicêntrica para estimar a reprodutibilidade da ciência
+biomédica brasileira
+- A meta é reproduzir uma amostra de 50 a 100 experimentos de artigos
+brasileiros em 3 a 5 áreas diferentes de pesquisa
+- Saber o quão reprodutível é a pesquisa no Brasil
+- Cada experimento será reproduzido em 3 laboratórios diferentes, com um
+protocolo pré-registrado e o mais próximo possível do estudo original
+-  A meta é estimar a reprodutibilidade da ciência brasileira de maneira
+ampla e propor soluções para melhorá-la
+- https://www.reprodutibilidade.bio.br
+
+## Replicação e reprodução no Brasil
 
 ```{r, echo=FALSE, out.width='100%'}
-knitr::include_graphics("img/informacao_qualidade.png")
+knitr::include_graphics("img/nature_test.png")
 ```
-
-## Replicação e reprodução na Ciência
-
-[Revista FAPESP,
-2018](http://revistapesquisa.fapesp.br/2018/03/20/disseminacao-desigual/?cat=politica)
-
-```{r, echo=FALSE, out.width='100%'}
-knitr::include_graphics("img/disseminacao_desigual.png")
-```
+[Nature, 2019](https://www.nature.com/articles/d41586-019-01485-z)
 
 # Elementos da reprodutibilidade
 
@@ -459,7 +484,7 @@ como:
 
 ## Ferramentas da reprodutibilidade
 
-Publicar dados e códigos não é necessariamente uma tarefa trivial.
+**Publicar dados e códigos não é necessariamente uma tarefa trivial.**
 
 Problemas comuns:
 
@@ -516,6 +541,83 @@ Algumas dicas para ajudar a tornar um projeto reproduzível:
 4. Organize e "amarre" seus arquivos de forma apropriada
 5. Tenha um plano para organizar, armazenar, e tornar seus arquivos
    disponíveis
+
+## Ferramentas da reprodutibilidade
+
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics("img/nature_toolkit.png")
+```
+[Nature, 2018](https://www.nature.com/articles/d41586-018-05990-5)
+
+- **Use code**. Instead of pointing and clicking, use programming
+languages.
+- **Go open-source**. Code transparency is key to reproducibility.
+- **Track your versions**. Use version-control software such as Git and
+GitHub.
+- **Document your analyses**. Use computational notebooks to interleave
+code, results and explanatory text in a single file.
+- **Archive your data**. Freeze data sets at key points (Zenodo,
+  Figshare).
+- **Replicate your environment**. Software "containers", such as
+**Docker**, bundle code, data and a computing environment into a single
+package.
+- **Automate**. Automation provides reproducibility without users really
+having to think about it (Travis CI).
+- **Get help**. Resources abound for interested researchers, e.g.
+  [Software Carpentry](https://software-carpentry.org/).
+
+
+## Exemplos de pesquisa reproduzível
+
+**Paper companions** do LEG (desde 2008)
+
+- Ideia de distribuir códigos e dados de papers publicados
+- http://www.leg.ufpr.br/papercompanions
+- Zeviani, *et al*. [The Gamma-count distribution in the analysis of
+  experimental underdispersed
+  data](http://www.leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014).
+  *Journal of Applied Statistics*, 2014.
+- Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
+  generalized linear mixed
+  models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm).
+  *Environmetrics*, 2015.
+
+## Distribuição de dados
+
+A disponibilização (e aquisição) de dados abertos pode ser feita através
+de **repositórios de dados**.
+
+Alguns exemplos são:
+
+- [figshare](https://figshare.com/): permite publicar individualmente
+  figuras, imagens, tabelas, vídeos, e dados. Cada compartilhamento
+  possui um **DOI**, e assim pode ser referenciado e citado.
+- [zenodo](https://zenodo.org/): compartilhamento de texto e dados.
+  Também possui DOI e identifica pesquisadores pelo
+  [Orcid](https://orcid.org/).
+- [Nature recommended data
+  repositories](https://www.nature.com/sdata/policies/repositories):
+  compilação de diversos repositórios de áreas específicas
+- [re3data](https://www.re3data.org/): *REgistry of REsearch Data
+  REpositories* é um buscador de bases de dados abertos
+
+## Distribuição de dados na UFPR
+
+```{r, echo=FALSE, out.width='100%'}
+knitr::include_graphics("img/bdc.png")
+```
+
+- A Base de Dados Científicos da Universidade Federal do Paraná (BDC/UFPR)
+é o resultado de uma parceria entre o Centro de Computação
+Científica e Software Livre (C3SL), e o Sistema de Bibliotecas (SiBi)
+UFPR.
+- Visa reunir os dados científicos utilizados nas pesquisas que foram
+publicadas pela comunidade da UFPR em teses, dissertações, artigos de
+revistas, e outros materiais bibliográficos.
+- Também possui DOI
+- https://bdc.c3sl.ufpr.br/
+
+# Documentos dinâmicos
 
 ## Documentos dinâmicos
 
@@ -574,55 +676,6 @@ Mais exemplos:
 - [Exemplo1-yaml2.Rmd](exemplos/Exemplo1-yaml2.Rmd)
 - [Exemplo3-knitr.Rmd](exemplos/Exemplo3-knitr.Rmd)
 
-## Exemplos de pesquisa reproduzível
-
-**Paper companions** do LEG (desde 2008)
-
-- Ideia de distribuir códigos e dados de papers publicados
-- http://www.leg.ufpr.br/papercompanions
-- Zeviani, *et al*. [The Gamma-count distribution in the analysis of
-  experimental underdispersed
-  data](http://www.leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014).
-  *Journal of Applied Statistics*, 2014.
-- Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
-  generalized linear mixed
-  models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm).
-  *Environmetrics*, 2015.
-
-## Distribuição de dados
-
-A disponibilização (e aquisição) de dados abertos pode ser feita através
-de **repositórios de dados**.
-
-Alguns exemplos são:
-
-- [figshare](https://figshare.com/): permite publicar individualmente
-  figuras, imagens, tabelas, vídeos, e dados. Cada compartilhamento
-  possui um **DOI**, e assim pode ser referenciado e citado.
-- [zenodo](https://zenodo.org/): compartilhamento de texto e dados.
-  Também possui DOI e identifica pesquisadores pelo
-  [Orcid](https://orcid.org/).
-- [Nature recommended data
-  repositories](https://www.nature.com/sdata/policies/repositories):
-  compilação de diversos repositórios de áreas específicas
-- [re3data](https://www.re3data.org/): *REgistry of REsearch Data
-  REpositories* é um buscador de bases de dados abertos
-
-## Distribuição de dados na UFPR
-
-```{r, echo=FALSE, out.width='100%'}
-knitr::include_graphics("img/bdc.png")
-```
-
-- A Base de Dados Científicos da Universidade Federal do Paraná (BDC/UFPR)
-é o resultado de uma parceria entre o Centro de Computação
-Científica e Software Livre (C3SL), e o Sistema de Bibliotecas (SiBi)
-UFPR.
-- Visa reunir os dados científicos utilizados nas pesquisas que foram
-publicadas pela comunidade da UFPR em teses, dissertações, artigos de
-revistas, e outros materiais bibliográficos.
-- Também possui DOI
-- https://bdc.c3sl.ufpr.br/
 
 # Mais recursos
 
