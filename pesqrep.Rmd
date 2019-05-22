@@ -676,6 +676,14 @@ Mais exemplos:
 - [Exemplo1-yaml2.Rmd](exemplos/Exemplo1-yaml2.Rmd)
 - [Exemplo3-knitr.Rmd](exemplos/Exemplo3-knitr.Rmd)
 
+Alguns links sobre como usar:
+
+- [Pesquisa reproduzível com R: de documentos dinâmicos a
+  pacotes](http://cursos.leg.ufpr.br/prr/): minicurso realizado na RBRAS
+  2016 pelos Professores Fernando Mayer e Walmes Zeviani.
+- [R Markdown](https://youtu.be/qFh4XtckP2k): vídeo apresentando a
+  funcionalidade do R Markdown (2015, Meetup R São Paulo).
+
 
 # Mais recursos
 
