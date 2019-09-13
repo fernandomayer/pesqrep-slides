@@ -1,7 +1,7 @@
 ---
 title: "Pesquisa reproduzível"
 subtitle: "Fundamentos e ferramentas"
-author: Fernando Mayer
+author: "Fernando Mayer (LEG/DEST/UFPR)"
 date: 2019-09-13
 output:
   xaringan::moon_reader:
@@ -18,18 +18,6 @@ output:
 source("setup_knitr.R")
 ```
 
-## Sumário
-
-- [Introdução](#introdução)
-- [Um estudo de caso](#um-estudo-de-caso)
-- [Como a ciência funciona](#como-a-ciência-funciona)
-- [Replicação e reprodução na Ciência](#replicação-e-reprodução-na-ciência)
-- [Elementos da reprodutibilidade](#elementos-da-reprodutibilidade)
-- [Ferramentas da reprodutibilidade](#ferramentas-da-reprodutibilidade)
-- [Documentos dinâmicos](#documentos-dinâmicos)
-- [Mais recursos](#mais-recursos)
-
----
 # Introdução
 
 **Evolução da tecnologia**
@@ -625,21 +613,31 @@ revistas, e outros materiais bibliográficos.
 
 **Paper companions** do LEG (desde 2008)
 
-- Ideia de distribuir códigos e dados de papers publicados
+- Ideia de distribuir códigos e dados de artigos publicados
 - http://www.leg.ufpr.br/papercompanions
-- Zeviani, *et al*. [The Gamma-count distribution in the analysis of
+  - Zeviani, *et al*. [The Gamma-count distribution in the analysis of
   experimental underdispersed
   data](http://www.leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014).
   *Journal of Applied Statistics*, 2014.
-- Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
+  - Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
   generalized linear mixed
-  models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm).
-  *Environmetrics*, 2015.
+  models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm). *Environmetrics*, 2015.
 
 ---
 # Mais recursos
 
-## Mais recursos
+- Software Carpentry [Lessons](https://software-carpentry.org/lessons/)
+- [Reproducibility in
+  Science](http://ropensci.github.io/reproducibility-guide/). A Guide to
+  enhancing reproducibility in scientific results and writing (rOpensci)
+- [Pesquisa reproduzível com R: de documentos dinâmicos a
+  pacotes](http://cursos.leg.ufpr.br/prr/): minicurso realizado na RBRAS
+  2016 pelos Professores Fernando Mayer e Walmes Zeviani.
+- [R Markdown](https://youtu.be/qFh4XtckP2k): vídeo apresentando a
+  funcionalidade do R Markdown (2015, Meetup R São Paulo).
+
+---
+# Referências
 
 - Box, GEP; Hunter, JS; Hunter, WG. [Statistics for experimenters:
   Design Innovation and Discovery](http://statisticsforexperimenters.net).
@@ -649,11 +647,6 @@ revistas, e outros materiais bibliográficos.
   Data-Intensive
   Sciences](https://www.practicereproducibleresearch.org/).
   Oakland, CA: University of California Press
-- Software Carpentry [Lessons](https://software-carpentry.org/lessons/)
-- [Reproducibility in
-  Science](http://ropensci.github.io/reproducibility-guide/). A Guide to
-  enhancing reproducibility in scientific results and writing (rOpensci)
-- [Pesquisa reproduzível com R](http://cursos.leg.ufpr.br/prr)
 - Gandrud, C. (2015). [Reproducible Research with R and R
   Studio](https://www.crcpress.com/Reproducible-Research-with-R-and-R-Studio-Second-Edition/Gandrud/p/book/9781498715379)
 - Stodden, V., Leisch, F., Peng, RD. (2014). [Implementing Reproducible
@@ -662,8 +655,6 @@ revistas, e outros materiais bibliográficos.
   Research](http://www.tandfonline.com/doi/abs/10.1198/106186007X178663).
   Journal of Computational and Graphical Statistics.
 
-- [Pesquisa reproduzível com R: de documentos dinâmicos a
-  pacotes](http://cursos.leg.ufpr.br/prr/): minicurso realizado na RBRAS
-  2016 pelos Professores Fernando Mayer e Walmes Zeviani.
-- [R Markdown](https://youtu.be/qFh4XtckP2k): vídeo apresentando a
-  funcionalidade do R Markdown (2015, Meetup R São Paulo).
+---
+class: center, middle, inverse
+# Obrigado!
