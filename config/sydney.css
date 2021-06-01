@@ -5,12 +5,13 @@
  Slide margins and spacings
  ***********/
 .remark-slide-content {
-  padding-top: 25px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 25px;
+  /* padding-top: 25px; */
+  /* padding-left: 50px; */
+  /* padding-right: 50px; */
+  /* padding-bottom: 25px; */
   border-bottom: 5px solid #e64626;
   font-size: 30px;
+  padding: 1em 3em 1em 3em; /* 1em 3em 1em 3em; */ /* t r b l*/
 }
 /*
 To specify the margin of the first title h1
@@ -18,13 +19,13 @@ To specify the margin of the first title h1
 .remark-slide-content > h1:first-of-type {
   color: #e64626;
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* 10px; */
   font-size: 40px;
 }
 .remark-slide-content > h2:first-of-type {
     color: #5b5b5b; /* #b7b7b7; */
     margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* 10px; */
     font-size: 35px;
 }
 .remark-slide-content > h3:first-of-type {
@@ -411,7 +412,7 @@ slides > slide {
 
 .title-slide {
     background-image: url(ufpr_logo.png);
-    background-position: 8% 90%;
+    background-position: 10% 90%;
     background-size: 200px; /* 160px; */
     background-color: #e64626;
     text-align:left;
