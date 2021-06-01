@@ -37,13 +37,18 @@ h1, h2, h3, h4 {
   font-size: 15px;
 }
 
+.msmall {
+    font-size: 18px;
+}
+
+
 /* regular slide */
 .remark-slide-content {
   background-color: #FAFAFA;
   border-bottom: 5px solid #ff5f0f;
-  font-size: 25px; /* 20px; */
-  font-weight: 400; /* 300; */
-  /* line-height: 1.2; */
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.2;
   padding: 1em 3em 1em 3em;
 }
 
@@ -70,8 +75,18 @@ h1, h2, h3, h4 {
 }
 
 /* title slide */
+/* .title-slide { */
+/*     /\* background-color: #121316; *\/ */
+/*     background-color: #5b5b5b; */
+/* } */
+
 .title-slide {
-  background-color: #121316;
+	  background-color: #5b5b5b;
+    /* background-image: url(logo/qr_img.png); */
+	  /* background-position: left bottom 20px; */
+	  /* background-size: 20%; */
+	  /* border-bottom: 0px solid  #522D80; */
+	  /* box-shadow:  0 55px 0 #fff; */
 }
 
 .title-slide h1  {
@@ -128,4 +143,61 @@ h1, h2, h3, h4 {
 
 .remark-code-line-highlighted {
   background-color: #ffead3;
+}
+
+.my-logo-left {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left:   20px;
+    height: 40px;
+    width: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://www.r-project.org/logo/Rlogo.png);
+}
+
+.my-logo-right {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right:   8px;
+    height: 40px;
+    width: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(https://www.r-project.org/logo/Rlogo.png);
+}
+
+/* .title-slide.remark-slide-content:before{ */
+/*     position: absolute; */
+/*     content: url(logo/qr_img.png); */
+/*     top: -10px; */
+/*     left: -30px; */
+/*     width: 80px; */
+/*     height: 80px; */
+/*     /\* top: 15px; *\/ */
+/*     /\* right:   108px; *\/ */
+/*     /\* height: 10px; *\/ */
+/*     /\* width: 10px; *\/ */
+/*     /\* height:30px; *\/ */
+/* } */
+
+/* .title-slide.remark-slide-content:before{ */
+/*     position: absolute; */
+/*     content: url(logo/qr_img.png); */
+/*     margin-right: 10px; */
+/*     /\* left: -30px; *\/ */
+/*     width: 80px; */
+/*     height: 80px; */
+/*     /\* top: 15px; *\/ */
+/*     /\* right:   108px; *\/ */
+/*     /\* height: 10px; *\/ */
+/*     /\* width: 10px; *\/ */
+/*     /\* height:30px; *\/ */
+/* } */
+
+
+.title-slide .remark-slide-number {
+    display: none;
 }
