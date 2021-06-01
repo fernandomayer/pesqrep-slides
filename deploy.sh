@@ -2,11 +2,11 @@
 
 USER=fernandomayer
 HOST=leg.ufpr.br
-DIR=public_html/pesqrep-eco
+DIR=public_html/pesqrep
 read -p 'PORTA: ' PORT
 
-Rscript -e 'rmarkdown::render("pesqrep-eco.Rmd")'
-rsync -avz -e "ssh -p $PORT" pesqrep-eco.html ${USER}@${HOST}:~/${DIR}/index.html
-rsync -avz -e "ssh -p $PORT" pesqrep-eco.pdf ${USER}@${HOST}:~/${DIR}/pesqrep-eco.pdf
+Rscript -e 'rmarkdown::render("pesqrep.Rmd")'
+rsync -avz -e "ssh -p $PORT" pesqrep.html ${USER}@${HOST}:~/${DIR}/index.html
+rsync -avz -e "ssh -p $PORT" pesqrep.pdf ${USER}@${HOST}:~/${DIR}/pesqrep.pdf
 
 exit 0
