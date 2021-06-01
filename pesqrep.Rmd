@@ -7,7 +7,7 @@ output:
   xaringan::moon_reader:
     # css: ["default", "config/ibm-plex.css", "config/ibm-plex-fonts.css"]
     css: ["default", "config/sydney.css", "config/sydney-fonts.css"]
-    self_contained: FALSE
+    self_contained: TRUE
     includes:
       in_header: "config/mathjax-equation-numbers.html"
     nature:
@@ -43,8 +43,6 @@ knitr::include_graphics("img/qrcode.png")
 ```
 
 ---
-date2: `r Sys.Date()`
-
 # Introdução
 
 **Evolução da tecnologia**
@@ -60,8 +58,6 @@ date2: `r Sys.Date()`
 
 - Entender o que alguém fez em uma análise de dados atualmente, requer
   olhar para o **código**
-
-Atualizado em {{ date2 }}
 
 ---
 # Um estudo de caso
@@ -172,7 +168,9 @@ desenvolveram grande parte da teoria estatística atual
 O aprendizado avança conforme ilustrado na figura abaixo (extraída de
 Box, Hunter e Hunter, 2005):
 
-```{r, echo=FALSE, out.width='70%'}
+<br>
+
+```{r, echo=FALSE, out.width='60%'}
 knitr::include_graphics("img/deduction-induction.png")
 ```
 
@@ -181,39 +179,56 @@ knitr::include_graphics("img/deduction-induction.png")
 
 ## Um loop de feedback
 
-```{r, echo=FALSE, out.width='80%'}
+```{r, echo=FALSE, out.width='60%'}
 knitr::include_graphics("img/feedback-loop.png")
 ```
 
 ---
 # Como a ciência funciona
 
-```{r, echo=FALSE, out.width='60%'}
-knitr::include_graphics("img/feynman.jpg")
-```
+<br>
+<br>
+<br>
 
+.pull-left[
 > *As declarações da ciência não são sobre o que é verdade e o que não é
 verdade, mas declarações do que é conhecido com **diferentes graus de
 certeza** *
 
-@[ProfFeynman](https://twitter.com/ProfFeynman)
+> @[ProfFeynman](https://twitter.com/ProfFeynman)
+
+]
+
+.pull-right[
+```{r, echo=FALSE, out.width='70%'}
+knitr::include_graphics("img/feynman.jpg")
+```
+]
+
 
 ---
 # Como a ciência funciona
 
 ## Análise de dados como arte
 
-> *Ciência é conhecimento que entendemos tão bem que podemos ensiná-la
-> para um computador. Todo o resto é arte.*
+<br>
 
-> Donald Knuth, 1974
-
+.pull-left[
 O processo de análise de dados por um pesquisador pode ser comparado ao
 processo de **criação de uma música por um músico**.
 
 Os métodos já foram ensinados ao computador, cabe ao analista **saber
 como juntar as ferramentas** e aplicá-las para responder questões
 relevantes para a ciência e para as pessoas.
+]
+
+.pull-right[
+> *Ciência é conhecimento que entendemos tão bem que podemos ensiná-la
+> para um computador. Todo o resto é arte.*
+
+> Donald Knuth, 1974
+
+]
 
 ---
 class: center, middle, inverse
@@ -239,7 +254,9 @@ independente
 resultados de um estudo anterior, seguindo os **mesmos métodos**, mas
 com coleta de **novos dados**.
 
-```{r, out.width='65%', echo=FALSE}
+<br>
+
+```{r, out.width='50%', echo=FALSE}
 knitr::include_graphics("img/replication.png")
 ```
 
@@ -262,25 +279,18 @@ Além disso, existem estudos que **dificilmente podem ser replicados**:
 ---
 # Replicação e reprodução na Ciência
 
-- Existem muitas boas razões pelas quais não podemos replicar um estudo
+Existem muitas boas razões pelas quais não podemos replicar um estudo
 
-- Se replicar não é possível, então existem duas opções:
+Se replicar não é possível, então existem duas opções:
 
 1. Não fazer nada (não é uma opção de verdade)
 2. Reproduzir a pesquisa
 
 A ideia é criar uma espécie de **padrão mínimo**, ou um **meio-termo**
-entre replicar um estudo e não fazer nada.
+entre replicar um estudo e não fazer nada ([Peng, 2011,
+*Science*](http://science.sciencemag.org/content/334/6060/1226.full))
 
----
-# Replicação e reprodução na Ciência
-
-[Peng, 2011,
-*Science*](http://science.sciencemag.org/content/334/6060/1226.full)
-
-<br>
-
-```{r, out.width='100%', echo=FALSE}
+```{r, out.width='70%', echo=FALSE}
 knitr::include_graphics("img/F1.large.jpg")
 ```
 
@@ -291,19 +301,24 @@ knitr::include_graphics("img/F1.large.jpg")
 resultados de um estudo anterior, seguindo os **mesmos métodos**, e
 utilizando os **mesmos dados**.
 
-```{r, out.width='70%', echo=FALSE}
+<br>
+
+```{r, out.width='50%', echo=FALSE}
 knitr::include_graphics("img/reproduction.png")
 ```
 
 ---
 # Replicação e reprodução na Ciência
 
+<br>
+
+.pull-left-40[
 Uma parte fundamental da **pesquisa reproduzível** é tornar disponíveis
 - Dados
 - Métodos computacionais (em forma de **código**)
+]
 
-<br>
-
+.pull-right-60[
 > Um projeto científico é **computacionalmente reproduzível** se um
 segundo pesquisador (**incluindo você no futuro**) é capaz de recriar os
 resultados finais do projeto, incluindo as descobertas quantitativas,
@@ -311,6 +326,7 @@ tabelas e figuras, **dado apenas um conjunto de arquivos e instruções
 escritas**.
 
 > Justin Kitzes
+]
 
 ---
 # Replicação e reprodução na Ciência
@@ -318,7 +334,6 @@ escritas**.
 Se reproduzir uma análise leva à um resultado já conhecido e esperado,
 então **qual o propósito de uma pesquisa reproduzível**?
 
-.msmall[
 .pull-left-60[
 **Para a Ciência:**
 
@@ -339,12 +354,12 @@ então **qual o propósito de uma pesquisa reproduzível**?
 - Melhor trabalho em equipe
 - Mudanças futuras são mais fáceis
 ]
-]
+
 
 ---
 # Replicação e reprodução na Ciência
 
-**Possíveis preocupações:**
+## Possíveis preocupações
 
 - Como fica a questão da **propriedade intelectual**?
 
@@ -391,7 +406,7 @@ reproducibility**. [PNAS,
 ---
 # Replicação e reprodução na Ciência
 
-```{r, echo=FALSE, out.width='55%'}
+```{r, echo=FALSE, out.width='40%'}
 knitr::include_graphics("img/tab1.png")
 ```
 
@@ -403,48 +418,64 @@ knitr::include_graphics("img/tab1.png")
 Algumas respostas recebidas ([Stodden *et al*,
 2018](http://www.pnas.org/content/115/11/2584)):
 
-.msmall[
+.small[
 
+.pull-left[
+
+.content-box-blue[
 *Tenho que dizer que essa é uma **solicitação pouco usual** [...]. Peça
 ao seu orientador para me mandar um email com explicações detalhadas
 ...*
+]
 
+.content-box-grey[
 *Os arquivos de dados permanecem sob **nossa propriedade e não são
 disponibilizados de graça** ...*
+]
 
+.content-box-blue[
 *O código que escrevemos é **resultado de anos de esforço acumulado**
 [...]. Os dados foram coletados por diversos colaboradores, então teria
 que **pedir permissão à eles também** ...*
+]
+]
 
+.pull-right[
+
+.content-box-grey[
 *Para os cálculos, eu **usei meus próprios códigos, e não há uma versão
 pública deles**. Como o código **não é muito amigável**, eu prefiro não
 compartilhar ...*
+]
 
+.content-box-blue[
 *Nosso código **não foi escrito pensando em ser compartilhado com outras
 pessoas**. Os códigos **não são documentados**, e não temos tempo de
 fazer isso ...*
+]
 
+.content-box-grey[
 *R é um software livre disponível em www.r-project.org. Como você deve
 saber, **os modelos são muito complicados** [...]. Eu usei Matlab para a
 geometria.*
+]
+]
 
 ]
 
 ---
 # Replicação e reprodução no Brasil
 
-```{r, echo=FALSE, out.width='100%'}
+<br>
+
+```{r, echo=FALSE, out.width='70%'}
 knitr::include_graphics("img/fapesp.png")
 ```
-
-<!-- - [Revista FAPESP, 2014](http://revistapesquisa.fapesp.br/2014/04/24/ciencia-transparente/?cat=politica) -->
-<!-- - [Revista FAPESP, 2018](http://revistapesquisa.fapesp.br/2018/01/16/informacao-com-qualidade/?cat=politica) -->
-<!-- - [Revista FAPESP, 2018](http://revistapesquisa.fapesp.br/2018/03/20/disseminacao-desigual/?cat=politica) -->
 
 ---
 # Replicação e reprodução no Brasil
 
-```{r, echo=FALSE, out.width='50%'}
+```{r, echo=FALSE, out.width='40%'}
 knitr::include_graphics("img/iniciativa.png")
 ```
 
@@ -464,7 +495,7 @@ class: center, middle, inverse
 ---
 # Elementos da reprodutibilidade
 
-Quatro elementos principais:
+## Quatro elementos principais
 
 1. **Dados**: Os dados utilizados na análise devem ser disponibilizados
    *da maneira como foram analisados originalmente*.
@@ -498,9 +529,9 @@ class: center, middle, inverse
 ---
 # Ferramentas da reprodutibilidade
 
-**Publicar dados e códigos não é necessariamente uma tarefa trivial.**
+## Publicar dados e códigos não é necessariamente uma tarefa trivial
 
-Problemas comuns:
+### Problemas comuns
 
 - Muitos autores simplesmente "colocam" arquivos na *web*.
 - Existem jornais que disponibilizam materiais suplementares, mas que
@@ -545,42 +576,56 @@ Algumas dicas para ajudar a tornar um projeto reproduzível:
 ---
 # Ferramentas da reprodutibilidade
 
-```{r, echo=FALSE, out.width='60%'}
+.pull-left-70[
+<br>
+<br>
+```{r, echo=FALSE, out.width='80%'}
 knitr::include_graphics("img/nature_toolkit.png")
 ```
+]
+
+.pull-right-30[
 [Nature, 2018](https://www.nature.com/articles/d41586-018-05990-5)
 
-- **Use code**
-- **Go open-source**
-- **Track your versions**
-- **Document your analyses**
-- **Archive your data**
-- **Replicate your environment**
-- **Automate**
-- **Get help**. [Software Carpentry](https://software-carpentry.org/).
+- Use code
+- Go open-source
+- Track your versions
+- Document your analyses
+- Archive your data
+- Replicate your environment
+- Automate
+- Get help. [Software Carpentry](https://software-carpentry.org/).
+]
 
 ---
 # Ferramentas da reprodutibilidade
 
 ## Documentos dinâmicos
 
-> *Instead of imagining that our main task is to instruct a computer what
-> to do, let us concentrate rather on explaining to humans what we want
-> the computer to do.*
->
-> Donald Knuth
+<br>
 
+.pull-left[
 Uma das ferramentas mais importantes para pesquisa reproduzível nos dias
 de hoje.
 
 A proposta é de distribuir dados e códigos **documentados** de uma
 pesquisa científica, de maneira acessível e auto-contida.
+]
+
+.pull-right[
+> *Instead of imagining that our main task is to instruct a computer what
+> to do, let us concentrate rather on explaining to humans what we want
+> the computer to do.*
+>
+> Donald Knuth
+]
 
 ---
 # Ferramentas da reprodutibilidade
 
 ## Documentos dinâmicos
 
+.pull-left-70[
 Decorre diretamente de *literate programming* (Knuth, 1984)
 
 - Da mesma forma que um *software* possui seu código-fonte, um documento
@@ -589,12 +634,47 @@ dinâmico é o código-fonte de um relatório.
   que o código está gerando
 - Quando **compilamos** o documento, o código é executado, assim obtemos
 um documento que mistura **código** e **texto**
+]
 
+.pull-right-30[
 No R:
 
 - `Sweave`
 - `knitr`
 - `rmarkdown`
+  - `bookdown`
+  - `blogdown`
+
+]
+
+---
+# Ferramentas da reprodutibilidade
+
+## Ambientes reproduzíveis
+
+.pull-left[
+**Ambientes virtuais**
+
+- A ideia é criar um ambiente virtual auto-contido
+- Relativamente simples instalar todos os pacotes necessários e **nas
+  versões específicas**
+- Depende do ambiente computacional
+  - No R: `renv`
+  - No Python: `venv`
+]
+
+.pull-right[
+**Virtualização de contêiners**
+
+- Virtualização de um ambiente ao nível do **sistema operacional**
+- Os contêineres são isolados uns dos outros e agrupam seus próprios
+  softwares, bibliotecas e arquivos de configuração
+- [Docker](https://www.docker.com/)
+]
+
+.center.content-box-purple[
+Script < Script+dados < renv < Docker
+]
 
 ---
 # Ferramentas da reprodutibilidade
@@ -651,6 +731,10 @@ revistas, e outros materiais bibliográficos.
   - Bonat & Ribeiro Jr. [Practical likelihood analysis for spatial
   generalized linear mixed
   models](http://www.leg.ufpr.br/doku.php/publications:papercompanions:sglmm). *Environmetrics*, 2015.
+
+---
+class: middle, center, inverse
+# Materiais e referências
 
 ---
 # Mais recursos
