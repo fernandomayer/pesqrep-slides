@@ -8,12 +8,14 @@ output:
   word_document: default
 ---
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 knitr::opts_chunk$set(out.width = "80%",
                       fig.align = "center",
+                      ## Para "esconder" os códigos, descomente essas
+                      ## linhas abaixo
                       ## echo = FALSE,
                       ## results = "hide",
                       fig.width = 8,
@@ -39,23 +41,6 @@ str(dados)
 ```
 
 # Análise descritiva
-
-<!-- ## Prova 1 -->
-
-<!-- O sumário estatístico da *prova 1* pode ser consultado na tabela abaixo. -->
-
-<!-- ```{r} -->
-<!-- summary(dados$prova1) -->
-<!-- ``` -->
-
-<!-- A distribuição das notas pode ser vista nos gráficos abaixo. -->
-
-<!-- ```{r, fig.show='hold'} -->
-<!-- par(mfrow = c(2, 1)) -->
-<!-- hist(dados$prova1, main = "Prova 1", xlab = "", ylab = "Frequência") -->
-<!-- boxplot(dados$prova1, horizontal = TRUE, xlab = "") -->
-<!-- par(mfrow = c(1, 1)) -->
-<!-- ``` -->
 
 Um resumo com as notas das 3 provas pode ser visto na tabela abaixo.
 
