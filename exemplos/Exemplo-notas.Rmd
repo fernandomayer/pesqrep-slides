@@ -1,0 +1,118 @@
+---
+title: Análise das notas da disciplina CE001
+author: Fernando Mayer
+date: 2021-06-01 (última atualização em `r Sys.Date()`)
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r, echo=FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+knitr::opts_chunk$set(out.width = "80%",
+                      fig.align = "center",
+                      ## echo = FALSE,
+                      ## results = "hide",
+                      fig.width = 8,
+                      fig.height = 6)
+```
+
+# Introdução
+
+Este documento apresenta uma análise descritiva das notas das provas
+realizadas pelos alunos regularmente matriculados na disciplina
+**CE001 - Estatística Básica**.
+
+# Dados
+
+Os dados estão disponíveis no arquivo [notas.csv](./notas.csv) e foram
+importados para o R.
+
+```{r}
+## Importa
+dados <- read.table("notas.csv", header = TRUE, sep = ";", dec = ",")
+## Confere estrutura
+str(dados)
+```
+
+# Análise descritiva
+
+<!-- ## Prova 1 -->
+
+<!-- O sumário estatístico da *prova 1* pode ser consultado na tabela abaixo. -->
+
+<!-- ```{r} -->
+<!-- summary(dados$prova1) -->
+<!-- ``` -->
+
+<!-- A distribuição das notas pode ser vista nos gráficos abaixo. -->
+
+<!-- ```{r, fig.show='hold'} -->
+<!-- par(mfrow = c(2, 1)) -->
+<!-- hist(dados$prova1, main = "Prova 1", xlab = "", ylab = "Frequência") -->
+<!-- boxplot(dados$prova1, horizontal = TRUE, xlab = "") -->
+<!-- par(mfrow = c(1, 1)) -->
+<!-- ``` -->
+
+Um resumo com as notas das 3 provas pode ser visto na tabela abaixo.
+
+```{r, results="show"}
+dados |>
+    pivot_longer(
+        !nome, names_to = "Provas", values_to = "notas",
+        names_transform = list(Provas = stringr::str_to_title)) |>
+    group_by(Provas) |>
+    summarise(temp = list(c(summary(notas)))) |>
+    unnest_wider(temp) |>
+    knitr::kable()
+```
+
+Nota-se que a média da prova 1 foi `r round(mean(dados$prova1), 2)`, da
+prova 2 foi `r round(mean(dados$prova2), 2)`, e da prova 3 foi
+`r round(mean(dados$prova3), 2)`.
+
+```{r, echo=FALSE}
+mm <- dados$nome[which.max(rowMeans(dados[,2:4]))]
+```
+
+O aluno que teve a maior média foi o `r mm`.
+
+Abaixo podemos ver a distribuição das notas entre as 3 provas.
+
+```{r}
+dados |>
+    pivot_longer(
+        !nome, names_to = "provas", values_to = "notas",
+        names_transform = list(provas = stringr::str_to_title)) |>
+    ggplot(aes(notas)) +
+    geom_histogram(binwidth = 1, color = "black", fill = "white") +
+    facet_wrap(~provas) +
+    xlab("") + ylab("")
+```
+
+Neste último gráfico podemos comparar a distribuição das notas entre as
+3 provas.
+
+```{r}
+dados |>
+    pivot_longer(
+        !nome, names_to = "provas", values_to = "notas",
+        names_transform = list(provas = stringr::str_to_title)) |>
+    ggplot(aes(x = provas, y = notas)) +
+    geom_boxplot() +
+    xlab("") + ylab("")
+```
+
+```{r, echo=FALSE}
+md <- sapply(dados[, 2:4], median)
+iqr <- sapply(dados[, 2:4], IQR)
+```
+
+As medianas das notas foram de `r md[1]` para a prova 1, `r md[2]` para
+a prova 2, e `r md[3]` para a prova 3.
+
+As distâncias inter-quartil das notas foram de `r iqr[1]` para a prova
+1, `r iqr[2]` para a prova 2, e `r iqr[3]` para a prova 3.
