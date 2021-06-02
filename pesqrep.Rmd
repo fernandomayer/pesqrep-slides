@@ -648,6 +648,13 @@ No R:
 ]
 
 ---
+class: sydney-yellow, middle
+
+# Para ver exemplos de documentos dinâmicos acesse esse link
+
+https://github.com/fernandomayer/pesqrep-slides/tree/master/exemplos
+
+---
 # Ferramentas da reprodutibilidade
 
 ## Ambientes reproduzíveis
